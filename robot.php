@@ -9,7 +9,7 @@ $xlsx = new SimpleXLSX('./_files/DATA.xlsx');
 
 try {
 
-    $conn = new PDO("mysql:host=localhost;dbname=data", "root", "j6t2h");
+    $conn = new PDO("mysql:host=localhost;dbname=data", "root", "");
 
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
