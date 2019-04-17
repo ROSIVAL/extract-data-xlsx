@@ -1,2 +1,2 @@
-*   Import db.sql
-*   Run from terminal php -f robot.php  
+*   Import db.sql (MYSQL)
+*   Run from terminal php -f robot.php
