@@ -9,7 +9,7 @@ $xlsx = new SimpleXLSX('./_files/DATA.xlsx');
 
 try {
 
-    $conn = new PDO("mysql:host=localhost;dbname=", "", "");
+    $conn = new PDO("mysql:host=localhost;dbname=data", "root", "j6t2h");
 
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -18,7 +18,7 @@ try {
     print $sql . "\n" . $e->getMessage();
 }
 
-$stmt = $conn->prepare("INSERT INTO data_form (
+$stmt = $conn->prepare("INSERT INTO data.data (
     GENDER,	
     AGE,
     PAYMENT_METHOD,
@@ -59,7 +59,7 @@ foreach ($data as $value) {
     $LAST_TRANSACTION = $value[4];
 
     if($stmt->execute()){
-        print "Inserted => ".$GENDER;
+        print "Inserted => ".$GENDER." => ".$AGE. " => ".$PAYMENT_METHOD;
         print "\n";
     }else{
         print "Error!!";
